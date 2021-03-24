@@ -14,13 +14,13 @@ HTML
     - 3 sections
     - headers
     - unordered list
-        - <ul> & <li>
+        - ```<ul> <li>```
     - ordered list
-        - <ol> & <li>
-    - button
-        - <button>
+        - ```<ol> <li>```
+    - play button
+        - ```<button>```
     - quiz results
-        - <div>
+        - ```<div>```
 2) TDD
     - connect utils.js to utils.test.js
         - import
