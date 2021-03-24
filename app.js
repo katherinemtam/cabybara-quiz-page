@@ -4,20 +4,20 @@ const randomButton = document.getElementById('random-button')
 const playButton = document.getElementById('play-button');
 const finalScore = document.getElementById('final-score');
 
-randomButton.addEventListener('click', () => {
+// randomButton.addEventListener('click', () => {
     
-}
+// }
 
 
 playButton.addEventListener('click', () => {
     alert('Welcome to the Capybara Quiz!');
-    const takeQuiz = confirm('Would you like to take the quiz?');
+    const name = prompt('What is your name?');
+    const takeQuiz = confirm(`Hi ${name}! Would you like to take the quiz?`);
     if (!takeQuiz) {
     alert("It's okay! Come back when you're ready to play!");
     return;
     }
-    const name = prompt('What is your name?');
-    console.log(name);
+    
     let gameScore = 0;
 
     const firstAnswer = prompt('Are capybaras rodents?');
@@ -27,9 +27,17 @@ playButton.addEventListener('click', () => {
     if(isYes(firstAnswer)) gameScore++;
     if(isYes(secondAnswer)) gameScore++;
     if(isYes(thirdAnswer)) gameScore++;
-    console.log(gameScore);
-
+    
+    if(gameScore <= 1) {
+        alert(`Oof! ${name}, you got ${gameScore} correct out of 3! Come back later and try again!`)
+        } else if (gameScore === 2) {
+        alert(`So close! ${name}, you got ${gameScore} correct out of 3! Come back later and try to get that perfect score!`)
+        } else {
+        alert(`Wow ${name}! You really know your stuff! You got ${gameScore} correct out of 3!`)
+        }     
+    
     const scoreMessage = `${name}, you got ${gameScore} correct out of 3!`;
+
     console.log(scoreMessage);
     finalScore.textContent = scoreMessage;
 })
