@@ -3,6 +3,9 @@ import { isYes } from './utils.js';
 const randomButton = document.getElementById('random-button')
 const playButton = document.getElementById('play-button');
 const finalScore = document.getElementById('final-score');
+const fact1 = document.getElementById('fact-1');
+const fact2 = document.getElementById('fact-2');
+const fact3 = document.getElementById('fact-3');
 
 // randomButton.addEventListener('click', () => {
     
@@ -28,13 +31,19 @@ playButton.addEventListener('click', () => {
     if(isYes(secondAnswer)) gameScore++;
     if(isYes(thirdAnswer)) gameScore++;
     
-    if(gameScore <= 1) {
+    if(gameScore === 0) {
+        alert(`Oof! ${name}, you got ${gameScore} correct out of 3! Come back later and try again!`)
+        } else if (gameScore === 1) {
         alert(`Oof! ${name}, you got ${gameScore} correct out of 3! Come back later and try again!`)
         } else if (gameScore === 2) {
         alert(`So close! ${name}, you got ${gameScore} correct out of 3! Come back later and try to get that perfect score!`)
         } else {
         alert(`Wow ${name}! You really know your stuff! You got ${gameScore} correct out of 3!`)
-        }     
+        }
+    
+        if(!isYes(firstAnswer)) fact1.classList.add('fact-1');
+        if(!isYes(secondAnswer)) fact2.classList.add('fact-2');
+        if(!isYes(thirdAnswer)) fact3.classList.add('fact-3'); 
     
     const scoreMessage = `${name}, you got ${gameScore} correct out of 3!`;
 

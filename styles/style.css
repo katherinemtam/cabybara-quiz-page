@@ -151,3 +151,21 @@ ol {
 .capybara-img {
     padding: 50px 50px 20px 50px;
 }
+
+.fact-1 {
+    color: rgb(184, 43, 43);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.fact-2 {
+    color: rgb(184, 43, 43);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.fact-3 {
+    color: rgb(184, 43, 43);
+    font-weight: bolder;
+    font-style: italic;
+}
