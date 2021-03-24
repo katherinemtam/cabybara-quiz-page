@@ -46,7 +46,5 @@ playButton.addEventListener('click', () => {
         if(!isYes(thirdAnswer)) fact3.classList.add('fact-3'); 
     
     const score = Math.round((gameScore / 3) * 100);
-
-    console.log(score);
     finalScore.textContent = `You scored ${score}%`
 })
