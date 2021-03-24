@@ -45,8 +45,8 @@ playButton.addEventListener('click', () => {
         if(!isYes(secondAnswer)) fact2.classList.add('fact-2');
         if(!isYes(thirdAnswer)) fact3.classList.add('fact-3'); 
     
-    const scoreMessage = `${name}, you got ${gameScore} correct out of 3!`;
+    const score = Math.round((gameScore / 3) * 100);
 
-    console.log(scoreMessage);
-    finalScore.textContent = scoreMessage;
+    console.log(score);
+    finalScore.textContent = `You scored ${score}%`
 })
