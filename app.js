@@ -32,19 +32,20 @@ playButton.addEventListener('click', () => {
     if(isYes(thirdAnswer)) gameScore++;
     
     if(gameScore === 0) {
-        alert(`Oof! ${name}, you got ${gameScore} correct out of 3! Come back later and try again!`)
+        alert(`Oof! ${name}, you got ${gameScore} correct out of 3! Read the fun facts highlighted in yellow and come back later to try again!`)
         } else if (gameScore === 1) {
-        alert(`Oof! ${name}, you got ${gameScore} correct out of 3! Come back later and try again!`)
+        alert(`Oof! ${name}, you got ${gameScore} correct out of 3! Read the fun facts highlighted in yellow and come back later to try again!`)
         } else if (gameScore === 2) {
-        alert(`So close! ${name}, you got ${gameScore} correct out of 3! Come back later and try to get that perfect score!`)
+        alert(`So close! ${name}, you got ${gameScore} correct out of 3! Read the fun fact highlighted in yellow and come back later to try to get that perfect score!`)
         } else {
         alert(`Wow ${name}! You really know your stuff! You got ${gameScore} correct out of 3!`)
         }
     
-        if(!isYes(firstAnswer)) fact1.classList.add('fact-1');
-        if(!isYes(secondAnswer)) fact2.classList.add('fact-2');
-        if(!isYes(thirdAnswer)) fact3.classList.add('fact-3'); 
+    if(!isYes(firstAnswer)) fact1.classList.add('fact-1');
+    if(!isYes(secondAnswer)) fact2.classList.add('fact-2');
+    if(!isYes(thirdAnswer)) fact3.classList.add('fact-3'); 
     
     const score = Math.round((gameScore / 3) * 100);
     finalScore.textContent = `You scored ${score}%`
+
 })
